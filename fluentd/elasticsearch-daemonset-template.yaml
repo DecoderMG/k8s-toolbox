@@ -2,7 +2,7 @@ apiVersion: extensions/v1beta1
 kind: DaemonSet
 metadata:
   name: fluentd
-  namespace: kube-system
+  namespace: kube-monitor
   labels:
     kubernetes.io/cluster-service: "true"
     type: fluentd
