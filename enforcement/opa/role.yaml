@@ -1,0 +1,14 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: enforcement
+  name: configmap-modifier
+  labels:
+    type: opa
+    function: admission-control
+    layer: cluster
+    version: v1
+rules:
+- apiGroups: [""]
+  resources: ["configmaps"]
+  verbs: ["update", "patch"]
