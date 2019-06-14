@@ -21,7 +21,7 @@ webhooks:
         apiVersions: ["*"]
         resources: ["*"]
     clientConfig:
-      caBundle: $(cat ${caCert} | base64 | tr -d '\n')
+      caBundle: $(cat $caCertPath | base64 | tr -d '\n')
       service:
         name: opa
         namespace: enforcement
