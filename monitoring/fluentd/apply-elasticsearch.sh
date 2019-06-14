@@ -24,7 +24,7 @@ kubectl apply -f cluster-role-binding.yaml
 rm -f elasticsearch-daemonset.yaml temp.yaml  
 ( echo "cat <<EOF >elasticsearch-daemonset.yaml";
   cat elasticsearch-daemonset-template.yaml;
-  echo "EOF";
+  EOF;
 ) >temp.yaml
 . temp.yaml
 rm temp.yaml
